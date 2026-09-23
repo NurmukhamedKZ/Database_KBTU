@@ -1,7 +1,7 @@
 -- Task 1.1: Database Creation with Parameters
 
 CREATE DATABASE university_main
-    OWNER = nurma
+    OWNER = CURRENT_USER
     TEMPLATE = template0
     ENCODING = 'UTF8';
 
@@ -179,8 +179,8 @@ ALTER TABLE courses ADD COLUMN department_id INTEGER;
 CREATE TABLE grade_scale (
 grade_id SERIAL PRIMARY KEY,
 letter_grade CHAR(2),
-min_percentage NUMERIC(3, 1),
-max_percentage NUMERIC(3, 1),
+min_percentage NUMERIC(4, 1),
+max_percentage NUMERIC(4, 1),
 gpa_points NUMERIC(3, 2)
 );
 
@@ -206,8 +206,8 @@ DROP TABLE IF EXISTS grade_scale;
 CREATE TABLE grade_scale (
 grade_id SERIAL PRIMARY KEY,
 letter_grade CHAR(2),
-min_percentage NUMERIC(3, 1),
-max_percentage NUMERIC(3, 1),
+min_percentage NUMERIC(4, 1),
+max_percentage NUMERIC(4, 1),
 gpa_points NUMERIC(3, 2),
 description TEXT
 );
