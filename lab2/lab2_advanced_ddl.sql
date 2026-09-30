@@ -227,6 +227,7 @@ is_current BOOLEAN
 
 -- Task 5.2: Database Cleanup
 
+ALTER DATABASE university_test WITH IS_TEMPLATE = false;
 DROP DATABASE IF EXISTS university_test;
 DROP DATABASE IF EXISTS university_distributed;
 
